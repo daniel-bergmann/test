@@ -3,7 +3,7 @@ const cors = require('cors');
 // body parser er notað fyrir POST
 const bodyParser = require('body-parser');
 
-let PORT = process.env.PORT || 3000;
+let PORT = process.env.PORT || 5000;
 
 // connecting to the MongoDB - passw: user - dbname: articleapp
 const MongoClient = require('mongodb').MongoClient;
