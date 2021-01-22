@@ -1,3 +1,4 @@
+require('dotenv').config();
 const app = require('express')();
 const cors = require('cors');
 // body parser er notað fyrir POST
@@ -15,7 +16,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // getting the data from the DB and displaying it on the dom
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
   client.connect(async (err) => {
     const collection = client.db('articleapp').collection('articles');
     const data = await collection.find().toArray();
