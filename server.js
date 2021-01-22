@@ -1,10 +1,11 @@
 require('dotenv').config();
-const app = require('express')();
+const express = require('express');
+const app = express();
 const cors = require('cors');
 // body parser er notað fyrir POST
 const bodyParser = require('body-parser');
 
-let PORT = process.env.PORT || 3000;
+let port = process.env.port || 5000;
 
 // connecting to the MongoDB - passw: user - dbname: articleapp
 const MongoClient = require('mongodb').MongoClient;
@@ -32,6 +33,6 @@ app.post('/', (req, res) => {
     });
 });
 
-app.listen(PORT, () => {
-  console.log(`app is running on http://localhost:${PORT}`);
+app.listen(port, () => {
+  console.log(`app is running on http://localhost:${port}`);
 });
