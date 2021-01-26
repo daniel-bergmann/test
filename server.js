@@ -25,6 +25,10 @@ app.get('/api', (req, res) => {
   });
 });
 
+app.get('/', (req, res) => {
+    res.send('hallo, kiktu a /api');
+});
+
 app.post('/', (req, res) => {
     console.log(req.body);
     client.connect(async (err)=> {
